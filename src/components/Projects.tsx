@@ -9,8 +9,8 @@ const Projects = () => {
       description: "The single-page application you are viewing right now! Built to showcase my professional experience, skills, and key projects using modern web development standards.",
       tech: ["React", "TypeScript", "Tailwind CSS", "FormSubmit"],
       image: "port.png", // Placeholder image
-      githubLink: "YOUR_PORTFOLIO_GITHUB_URL", // 👈 REPLACE with this Portfolio's GitHub URL
-      demoLink: "YOUR_PORTFOLIO_LIVE_URL", // 👈 REPLACE with this Portfolio's live URL (or keep empty)
+      githubLink: "https://github.com/hemasree1516/portfolio-sky", // 👈 REPLACE with this Portfolio's GitHub URL
+      //demoLink: "YOUR_PORTFOLIO_LIVE_URL", // 👈 REPLACE with this Portfolio's live URL (or keep empty)
     },
     {
       title: "Dormconnect (Hostel Review Platform)",
