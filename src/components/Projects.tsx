@@ -5,22 +5,28 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      title: "Personal Portfolio (React/Tailwind)",
+      description: "The single-page application you are viewing right now! Built to showcase my professional experience, skills, and key projects using modern web development standards.",
+      tech: ["React", "TypeScript", "Tailwind CSS", "FormSubmit"],
+      image: "port.png", // Placeholder image
+      githubLink: "YOUR_PORTFOLIO_GITHUB_URL", // 👈 REPLACE with this Portfolio's GitHub URL
+      demoLink: "YOUR_PORTFOLIO_LIVE_URL", // 👈 REPLACE with this Portfolio's live URL (or keep empty)
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management application with real-time updates and team features.",
-      tech: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+      title: "Dormconnect (Hostel Review Platform)",
+      description: "Designed and deployed a secure, scalable full-stack hostel review platform complete with robust APIs and backend serving over 100 users, focusing on accuracy and cost efficiency.",
+      tech: ["HTML", "JavaScript", "PHP", "MySQL", "Scalable Backend"],
+      image: "dc.png", // Placeholder image
+      githubLink: "https://github.com/hemasree1516/dormconnect",
+      demoLink: "https://dormconnect.42web.io/",
     },
     {
-      title: "Portfolio CMS",
-      description: "Custom content management system for portfolio websites with drag-and-drop builder.",
-      tech: ["React", "Express", "MongoDB", "AWS"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      title: "Sentiment Analysis Dashboard",
+      description: "Engineered a Python/Flask application featuring a dashboard that uses VADER NLP for real-time sentiment classification and instant UI updates, built with clean, tested code.",
+      tech: ["Python", "Flask", "NLP (VADER)", "HTML", "CSS"],
+      image: "sd.png", // Placeholder image
+      githubLink: "https://github.com/hemasree1516/Sentiment-Analysis-Dashboard-L",
+      demoLink: "https://hemasree.pythonanywhere.com/",
     },
   ];
 
@@ -33,31 +39,33 @@ const Projects = () => {
               Featured <span className="text-primary">Projects</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A selection of my recent work and personal projects
+              A selection of my recent work and academic projects
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="overflow-hidden border-2 hover:border-primary hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group"
               >
-                <div className="relative h-48 overflow-hidden bg-muted">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                
+                <a href={project.demoLink || project.githubLink} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} project`}>
+                  <div className="relative h-48 overflow-hidden bg-muted">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </a>
+
                 <div className="p-6 space-y-4">
                   <h3 className="text-xl font-semibold">{project.title}</h3>
                   <p className="text-muted-foreground text-sm">{project.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, idx) => (
-                      <span 
+                      <span
                         key={idx}
                         className="px-3 py-1 bg-secondary text-xs font-medium rounded-full"
                       >
@@ -67,14 +75,31 @@ const Projects = () => {
                   </div>
 
                   <div className="flex gap-3 pt-4">
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
-                    <Button size="sm" className="flex-1">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
-                    </Button>
+                    {/* Link to GitHub */}
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1"
+                    >
+                      <Button variant="outline" size="sm" className="w-full">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </Button>
+                    </a>
+
+                    {/* Link to Live Demo */}
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1"
+                    >
+                      <Button size="sm" className="w-full">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Demo
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </Card>
