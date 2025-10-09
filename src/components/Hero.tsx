@@ -1,28 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import skyHeroBg from "@/assets/sky-hero-bg.jpg";
 
 const Hero = () => {
   return (
     <section 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.88)), url(${heroBg})`,
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(${skyHeroBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-up">
+          <div className="flex justify-center mb-8">
+            <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-elegant">
+              <img 
+                src="/placeholder.svg" 
+                alt="Your Name" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
           <div className="space-y-4">
             <p className="text-lg md:text-xl text-muted-foreground font-medium tracking-wide">
               Hello, I'm
             </p>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight">
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Web Developer
+                Your Name
               </span>
             </h1>
+            <h2 className="text-2xl md:text-3xl text-primary font-semibold">
+              Web Developer
+            </h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
               Crafting beautiful, responsive, and user-friendly web experiences
             </p>
