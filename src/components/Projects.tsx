@@ -18,7 +18,7 @@ const Projects = () => {
         "NDVI Analysis",
       ],
       image: "farmers-stop.png",
-      githubLink: "https://github.com/hemasree1516/Farmers_Stop", // update if repo is public
+      githubLink: "https://github.com/hemasree1516/Farmers_Stop"
     },
     {
       title: "Sentiment Analysis Dashboard",
@@ -26,8 +26,7 @@ const Projects = () => {
         "A Python-Flask dashboard for real-time sentiment classification using VADER NLP. Optimized backend processing to reduce response latency and deliver instant UI updates for monitoring text sentiment.",
       tech: ["Python", "Flask", "NLP", "VADER", "HTML", "CSS"],
       image: "sd.png",
-      githubLink:
-        "https://github.com/hemasree1516/Sentiment-Analysis-Dashboard-L",
+     githubLink: "https://github.com/hemasree1516/Sentiment-Analysis-Dashboard-"
     },
     {
       title: "Dormconnect",
