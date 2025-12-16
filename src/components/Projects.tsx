@@ -18,7 +18,7 @@ const Projects = () => {
         "NDVI Analysis",
       ],
       image: "farmers-stop.png",
-      githubLink: "https://github.com/hemasree1516/Farmers-Stop", // update if repo is public
+      githubLink: "https://github.com/hemasree1516/Farmers_Stop", // update if repo is public
     },
     {
       title: "Sentiment Analysis Dashboard",
