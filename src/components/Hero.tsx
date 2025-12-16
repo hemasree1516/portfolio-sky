@@ -23,7 +23,7 @@ const Hero = () => {
             {/* Reduced max-w-xs to max-w-60 (around 240px) for a smaller image, centered on small screens */}
             <div className="relative w-full max-w-60 mx-auto overflow-hidden shadow-elegant border-4 border-primary/20">
               <img
-                src="dp.png"
+                src="dp2.png"
                 alt="Kommu Hemasree Profile"
                 className="w-full h-auto object-cover"
               />
@@ -43,18 +43,27 @@ const Hero = () => {
               </span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-primary font-semibold">
-              Web Developer
+              Software Engineer
             </h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto md:mx-0"> {/* Removed auto margins for left alignment */}
-              Crafting beautiful, responsive, and user-friendly web experiences
+              Building scalable full-stack applications and solving real-world problems using modern technologies.
             </p>
 
             {/* Button and Social Links are still below the text, but contained within this flex item */}
             <div className="flex flex-wrap gap-4 justify-center md:justify-start items-center pt-8"> {/* Left-aligned buttons on medium+ screens */}
-              <Button size="lg" variant="hero" className="animate-glow">
+              <Button
+                size="lg"
+                variant="hero"
+                className="animate-glow"
+                onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 View My Work
               </Button>
-              <Button size="lg" variant="outline">
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Get In Touch
               </Button>
             </div>
@@ -92,7 +101,13 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="w-6 h-6 text-primary" />
+        <button
+          aria-label="Scroll to About"
+          onClick={() => document.getElementById('aboutme')?.scrollIntoView({ behavior: 'smooth' })}
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-white/0 hover:bg-white/10 transition"
+        >
+          <ArrowDown className="w-6 h-6 text-primary" />
+        </button>
       </div>
     </section>
   );
